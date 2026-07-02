@@ -34,7 +34,8 @@ Both `sshd_config` and `administrators_authorized_keys` must be in the same dire
 .\enableSSH.ps1
 ```
 
-The script is idempotent and safe to re-run — suitable for scheduled deployment (e.g. GPO startup script or configuration management).
+Can be run manually or deployed domain-wide via a GPO scheduled task —
+see [docs/gpo-deployment.md](docs/gpo-deployment.md).
 
 ## Notes
 
