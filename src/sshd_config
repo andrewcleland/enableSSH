@@ -1,0 +1,15 @@
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+PasswordAuthentication no
+GSSAPIAuthentication yes
+
+# override default of no subsystems
+Subsystem	sftp	sftp-server.exe
+
+Match Group administrators
+       AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys
+
+Match User rwadmin
+       PasswordAuthentication yes
+
