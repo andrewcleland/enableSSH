@@ -1,4 +1,4 @@
-# Install-OpenSSHServer
+# enableSSH
 
 Installs and configures the Windows OpenSSH Server feature for remote management (e.g. Ansible over SSH).
 
@@ -16,7 +16,7 @@ Installs and configures the Windows OpenSSH Server feature for remote management
 
 | File | Purpose |
 |------|---------|
-| `Install-OpenSSHServer.ps1` | The install/configure script |
+| `enableOpenSSH.ps1` | The install/configure script |
 | `sshd_config` | Server configuration deployed to `%ProgramData%\ssh\` |
 | `administrators_authorized_keys` | Public keys for members of the Administrators group |
 
@@ -31,7 +31,7 @@ Both `sshd_config` and `administrators_authorized_keys` must be in the same dire
 ## Usage
 
 ```powershell
-.\Install-OpenSSHServer.ps1
+.\enableSSH.ps1
 ```
 
 The script is idempotent and safe to re-run — suitable for scheduled deployment (e.g. GPO startup script or configuration management).
